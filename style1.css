@@ -1,0 +1,210 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/background.jpeg");
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin-top: 0;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #74919b; /* White container background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
+    background-color: #007bff;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Power button styles */
+.power-button {
+    text-align: center;
+}
+
+/* Button styles */
+.btn-light {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Power icon styles */
+.power-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.power-status {
+    font-weight: bold;
+}
+
+/* Agent logo and info styles */
+.agent-logo-info {
+    display: flex;
+    align-items: center;
+}
+
+.agent-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+
+.agent-info {
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 12px;
+}
+
+.agent-name,
+.agent-id {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Main section styles */
+.main-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Timestamp styles */
+.timestamp {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+.timestamp p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* Process dropdown styles */
+.process-dropdown {
+    margin-bottom: 25px;
+}
+
+/* Idle status styles */
+.idle-status .status-box {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+
+
+/* Break dropdown styles */
+.break-dropdown {
+    margin-bottom: 15px;
+}
+
+/* Queues and Zero Table Styles */
+.queues-zero-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.queues-column {
+    flex: 1;
+}
+
+/* Compact table styles */
+.compact-table {
+    border: 1px solid #090114;
+    background-color: #c7b3ce;
+    font-size: 12px; /* Adjust font size */
+}
+
+.compact-table th,
+.compact-table td {
+    border: 1px solid #0b0e9c;
+    padding: 4px 8px; /* Adjust padding */
+    text-align: center;
+    vertical-align: middle;
+}
+
+.compact-table thead th {
+    background-color: #1c78d4;
+    font-size: 14px; /* Adjust font size */
+    color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .header {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .power-button {
+        margin-left: auto;
+    }
+
+    .dropdown-arrow {
+        font-size: 8px;
+    }
+
+    .process-dropdown .process-options,
+    .break-dropdown .break-options {
+        font-size: 12px;
+    }
+
+    
+
+    .status-box {
+        font-size: 10px;
+    }
+
+    .queues-zero-container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .queues-column,
+    .zero-column {
+        margin-bottom: 5px;
+    }
+}

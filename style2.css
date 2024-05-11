@@ -1,0 +1,292 @@
+body, h1, h2, h3, h4, p, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 12px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  margin-top: -50px; /* Reduce the top margin */
+}
+
+.content-block.general-info {
+  flex-direction: row; /* Set flex direction to row */
+}
+
+.info-left {
+  flex: 1;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment {
+  margin-top: 10px;
+}
+
+
+.content-block h2,
+.content-block p,
+.followup-row h3,
+.dispositions-row h4,
+.large-input label,
+.small-input label {
+  margin-top: 6px; /* Adjust margin-top for section headings and labels */
+  color: #0056b3; /* Set the color for section headings and labels */
+}
+/* Inputs and labels */
+.large-input label, .small-input label {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: bold;
+  font-size: 12px; /* Adjusted font size */
+}
+
+.large-input,
+.small-input {
+  margin-bottom: 0;
+  width: 100%; /* Adjusted width for input containers */
+}
+
+/* Basic styling for the container */
+.container {
+  max-width: 1000px; /* Increase max-width for the container */
+  margin: 0 auto;
+  padding: 20px; /* Adjust padding for the container */
+}
+
+.tabs {
+  display: flex;
+  margin: 12px;
+  margin-bottom: 15px; /* Adjust margin-bottom for tabs */
+  width: 80%; /* Increase width for tabs */
+}
+
+.tab-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px; /* Adjust border-radius for tab buttons */
+  padding: 8px 16px; /* Adjust padding for tab buttons */
+  cursor: pointer;
+  margin-right: 8px; /* Adjust margin-right for tab buttons */
+}
+
+
+.tab-button.active {
+  background-color: #0056b3;
+}
+
+.content-block {
+  padding: 15px;
+  border: 1px solid #0056b3;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  margin: 0;
+  width: 120px;
+}
+
+
+/* Additional styling for .info-row */
+.info-row {
+  display: flex;
+  flex-direction: row;
+  
+  margin-bottom: 10px;
+}
+/* New styling for .info-left and .info-right */
+.info-left,
+.info-right {
+  flex: 1;
+}
+
+.info-left {
+  flex: 1;
+  margin-right: 0;
+}
+
+.info-right {
+  margin-left: 20px; /* Add spacing between left and right sections */
+}
+#primaryNumber {
+  width: 60%;
+  height: 25px;
+}
+#customerName {
+  width: 60%;
+  height: 25px;
+}
+
+#email {
+  width: 60%;
+  height: 25px;
+}
+
+#comment {
+  width: 80%;
+  height: 50px; /* Adjust the height as needed */
+}
+
+#address {
+  width: 80%;
+  height: 37px;
+}
+
+.info-row .col-6 {
+  margin-right: 20px; /* Add margin-right to info columns */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select,
+input[type="date"],
+input[type="time"],
+button {
+  width: 20%;
+  padding: 6px;
+  margin-bottom: 2px; /* Adjusted margin-bottom for inputs and dropdowns */
+  border: 1px solid #0056b3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 12px; /* Adjusted font size */
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+button:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+select#dispositionDropdown,
+select#subDispositionDropdown,
+select#subSubDispositionDropdown,
+select#breaksDropdown,
+select#transferDropdown,
+select#followupDropdown {
+  width: 70%; /* Set width to 100% to adjust dropdown width */
+  padding: 6px;
+  margin-bottom: 2px; /* Adjusted margin-bottom for dropdowns */
+  border: 1px solid #0056b3; /* Add border to dropdown */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 12px;
+  outline: none;
+  height: 25px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select#dispositionDropdown:focus,
+select#subDispositionDropdown:focus,
+select#subSubDispositionDropdown:focus,
+select#breaksDropdown:focus,
+select#transferDropdown:focus,
+select#followupDropdown:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* Style for buttons container */
+.button-row {
+  display: flex;
+  justify-content: center; /* Center-align buttons */
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Add space between buttons */
+  margin-top: 40px; /* Add some space between the form elements and buttons */
+  
+  bottom: 20px; /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Style for buttons */
+.btn {
+  width: auto; /* Adjust width as needed */
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+.btn.btn-success {
+  background-color: #0056b3;
+}
+
+/* Additional styles as needed */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .info-row .col-6 {
+    margin-right: 0;
+  }
+}
+
+/* Custom styles */
+.flex-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+
+.dispositions-row,
+.followup-row,
+.button-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.followup-row > * {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* ... (existing styles) ... */
+
+.tab-button.active {
+  background-color: #0056b3;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}

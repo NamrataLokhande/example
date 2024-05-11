@@ -1,0 +1,90 @@
+/* compact-styles.css */
+
+/* Common styles for all tabs */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    background-color: #0056d6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: normal;
+  }
+  
+  .tab-button:hover {
+    background-color: #640b97;
+  }
+  
+  .tab-button.active {
+    background-color: #0056d6;
+  }
+  
+  /* Common styles for follow-ups section */
+  .follow-ups {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2797b3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .pending span,
+  .upcoming span {
+    background-color: #ca1818;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  
+  /* Home Tab Styles */
+  #home .chart-container {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  /* Call Summary Tab Styles */
+  #callSummaryTable,
+  #callbacksTable {
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  #callSummaryTable th,
+  #callSummaryTable td {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Compact styles for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+  
+    .tabs, .follow-ups {
+      margin-bottom: 0;
+    }
+  }
+  

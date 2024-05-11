@@ -1,0 +1,509 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+.line-background {
+  position: relative;
+  background-color: #f5f5f5; /* Background color for the line */
+}
+
+.line-background::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 12px; /* Adjust the height of the line */
+  
+}
+
+/* Container for frameset */
+.frameset-container {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main frameset */
+frameset {
+  border: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+
+/* Left frame (Agent CRM) */
+frame[name="leftFrame"] {
+  border: none;
+  width: 80%;
+}
+
+/* Right frame (Agent Info) */
+frame[name="rightFrame"] {
+  border: none;
+  width: 20%;
+  transition: width 0.3s ease;
+}
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Add spacing between tabs and charts */
+  }
+  
+  .tab-button {
+  background-color: #0056d6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-right: 2px; /* Reduce spacing between tab buttons */
+  font-weight: normal;
+  position: relative; /* Add position relative for the pseudo-element */
+}
+
+
+
+  
+  .tab-button:hover {
+    background-color: #640b97;
+     
+    
+  }
+  
+  .tab-button.active {
+    background-color: #0056d6;
+    border: #fff;
+  }
+  
+  /* Styling for Follow-ups section */
+.follow-ups {
+  display: flex;
+  align-items: center;
+  background-color: #2797b3; /* Add background color */
+  padding: 4px 8px; /* Add padding for spacing */
+  border-radius: 4px;
+  margin-bottom: 8px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.follow-ups h6,
+.follow-ups p {
+  margin: 0; /* Remove margin to avoid extra spacing */
+}
+
+.follow-ups h6 {
+  margin-bottom: 0;
+  margin-right: 10px; /* Add space between FollowUps and Pending */
+}
+
+.follow-ups p {
+  margin-bottom: 0;
+  margin-right: 10px; /* Add space between FollowUps and Pending */
+}
+
+.pending,
+.upcoming {
+  margin-right: 10px; /* Add spacing between follow-ups elements */
+}
+
+/* Styling for Pending and Upcoming spans */
+.pending span,
+.upcoming span {
+  background-color: #ca1818; /* Add background color */
+  color: #fff; /* Add text color */
+  padding: 2px 6px; /* Adjust padding */
+  border-radius: 4px;
+}
+
+  
+  .main-content {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px; /* Add space between charts and tabs from the top */
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+  
+    .tabs {
+      margin-bottom: 0;
+    }
+  
+    .follow-ups {
+      margin-bottom: 0;
+    }
+  }
+  /* Styling for Home, Call Summary, Offline CRM, and My Call Backs tab headers */
+.section-title {
+  background-color: #4ed5da;
+  
+  padding: 10px;
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Styling for the Home tab */
+#home {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+}
+
+#home .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#home .col-md-6 {
+  flex: 0 0 calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+#home .section-title {
+  background-color: #4ed5da;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#home .chart-container {
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px; /* Adjusted padding */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #home .col-md-6 {
+    flex: 0 0 100%;
+  }
+}
+
+  /* Styling for Call Summary tab and My Call History tab content */
+#callSummaryTable{
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-right: 25px;
+}
+#myCallHistory table {
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#callSummaryTable th,
+#callSummaryTable td,
+#myCallHistory table th,
+#myCallHistory table td {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  white-space: nowrap; /* Prevent line breaks in table cells */
+}
+
+/* Remove sorting arrows from column headers */
+#callSummaryTable th.sorting,
+#callSummaryTable th.sorting_asc,
+#callSummaryTable th.sorting_desc,
+#myCallHistory table th.sorting,
+#myCallHistory table th.sorting_asc,
+#myCallHistory table th.sorting_desc {
+  background-image: none;
+}
+
+/* Remove sorting indicator text from column headers */
+#callSummaryTable th.sorting::before,
+#callSummaryTable th.sorting_asc::before,
+#callSummaryTable th.sorting_desc::before,
+#myCallHistory table th.sorting::before,
+#myCallHistory table th.sorting_asc::before,
+#myCallHistory table th.sorting_desc::before {
+  content: none;
+}
+
+/* Remove sorting indicator text from column headers */
+#callSummaryTable th.sorting::after,
+#callSummaryTable th.sorting_asc::after,
+#callSummaryTable th.sorting_desc::after,
+#myCallHistory table th.sorting::after,
+#myCallHistory table th.sorting_asc::after,
+#myCallHistory table th.sorting_desc::after {
+  content: none;
+}
+
+
+/* Styling for the Call Summary tab */
+#callSummary {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#callSummary h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#callSummaryTable {
+  width: 100%;
+  margin-left: 0;
+  border-collapse: collapse;
+  border: 1px solid #ccc; /* Add border color to the table */
+  background-color: #fff; /* Add background color to the table */
+}
+
+#callSummaryTable th {
+  font-weight: bold;
+  color: rgb(97, 4, 4);
+  border: 1px solid #ccc; /* Add border color to table headers */
+  padding: 5px;
+}
+
+#callSummaryTable th,
+#callSummaryTable td {
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc; /* Add border color to table cells */
+}
+
+#callSummaryTable_length,
+#callSummaryTable_filter,
+#callSummaryTable_info,
+#callSummaryTable_paginate {
+  display: none;
+}
+
+/* Remove sorting arrows from column headers */
+#callSummaryTable th.sorting,
+#callSummaryTable th.sorting_asc,
+#callSummaryTable th.sorting_desc {
+  background-image: none;
+}
+
+/* Remove sorting indicator text from column headers */
+#callSummaryTable th.sorting::before,
+#callSummaryTable th.sorting_asc::before,
+#callSummaryTable th.sorting_desc::before {
+  content: none;
+}
+
+/* Remove sorting indicator text from column headers */
+#callSummaryTable th.sorting::after,
+#callSummaryTable th.sorting_asc::after,
+#callSummaryTable th.sorting_desc::after {
+  content: none;
+}
+/* Styling for Offline CRM Tab Content */
+#offlineCRM {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+}
+/* Styling for My Call Backs Tab Content */
+#mycallBacks {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#mycallBacks h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333; /* Adjust the text color */
+}
+
+.callbacks-summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.callbacks-summary p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.summary-label {
+  font-weight: bold;
+  background-color: #4ed5da; /* Add background color to the label */
+  padding: 5px 10px; /* Adjust padding for label */
+  border-radius: 4px;
+}
+
+#totalCallbacks,
+#pendingCallbacks,
+#upcomingCallbacks {
+  font-weight: bold;
+  color: #ca1818;
+}
+
+#callbacksTable {
+  width: 100%; /* Adjust the width to fit the container */
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  
+}
+
+#callbacksTable th {
+  font-weight: bold;
+  color: rgb(97, 4, 4);
+  border: 1px solid #ccc;
+  padding: 10px; /* Increase the padding for better spacing */
+  background-color: #f5f5f5; /* Add background color for header row */
+}
+
+#callbacksTable th,
+#callbacksTable td {
+  text-align: center;
+  padding: 10px; /* Increase the padding for better spacing */
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+#callbacksTable td {
+  color: #555; /* Adjust the text color */
+}
+
+#callbacksTable_length,
+#callbacksTable_filter,
+#callbacksTable_info,
+#callbacksTable_paginate {
+  display: none;
+}
+
+/* Remove sorting arrows from column headers */
+#callbacksTable th.sorting,
+#callbacksTable th.sorting_asc,
+#callbacksTable th.sorting_desc {
+  background-image: none;
+}
+
+/* Remove sorting indicator text from column headers */
+#callbacksTable th.sorting::before,
+#callbacksTable th.sorting_asc::before,
+#callbacksTable th.sorting_desc::before {
+  content: none;
+}
+
+/* Remove sorting indicator text from column headers */
+#callbacksTable th.sorting::after,
+#callbacksTable th.sorting_asc::after,
+#callbacksTable th.sorting_desc::after {
+  content: none;
+}
+
+/* Styling for My Call History Tab Content */
+#myCallHistory {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#myCallHistory th {
+  font-weight: bold;
+  color: rgb(97, 4, 4);
+  border: 1px solid #ccc;
+  padding: 10px; /* Increase the padding for better spacing */
+  background-color: #f5f5f5; /* Add background color for header row */
+}
+
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #4ed5da;
+  padding: 9px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-right: 10px;
+}
+
+.form-control {
+  width: auto;
+  flex: 1;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+#submitBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+  background-color: #0056d6;
+}
+
+
+
+/* Reduce the width of the No. of Records dropdown */
+#recordCount {
+  max-width: 80px;
+}
+
+/* Add space between dropdown and submit button */
+.inline-form .form-control,
+.inline-form #submitBtn {
+  margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container, #home .col-md-6 {
+    width: 100%;
+  }
+
+  .tabs, .follow-ups {
+    margin-bottom: 0;
+  }
+}

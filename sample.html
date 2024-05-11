@@ -1,0 +1,19 @@
+<!-- ... (your existing HTML code) ... -->
+<div class="dialpad" id="dialpad">
+    <input type="text" id="number" readonly autofocus> <!-- Add the "autofocus" attribute here -->
+    <!-- ... (other dialpad buttons) ... -->
+    <div class="controls">
+        <button class="clear" onclick="clearNumber()">Clear</button>
+    </div>
+</div>
+<!-- ... (rest of your HTML code) ... -->
+<script>
+    // ... (your existing JavaScript code) ...
+
+    function clearNumber() {
+        var number = document.getElementById("number");
+        number.value = number.value.slice(0, -1); // Remove the last character
+    }
+    
+    // ... (rest of your JavaScript code) ...
+</script>
